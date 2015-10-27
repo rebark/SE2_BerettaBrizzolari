@@ -1,0 +1,222 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+
+\section{Introduction}
+
+
+\subsection{Purpose}
+
+The purpose of this document is to explain in detail what the project
+``myTaxiService'' is about, specifying all requirements and specifications
+useful for the development of the software and letting the fruitors
+have an idea of how much work will be needed for the actual implementation
+of the application.
+
+
+\subsection{Scope}
+
+The main goal of this project is to optimize the taxi service of the
+city. This application will allow customers to request a taxi in the
+easiest way possible, passing through a system which will keep track
+of drivers\textquoteright{} availability. The system will choose the
+taxi for the customer and notify both parties, without them needing
+to have a direct contact. We want this application to be accessible
+from both smartphones and computer browsers. It will also need two
+different interfaces, one for each type of user: customer and taxi
+driver.
+
+
+\subsection{Definitions, acronysm and abbreviations}
+
+
+\subsection{References}
+
+
+\subsection{Overview}
+
+This document is divided in three parts.
+\begin{itemize}
+\item the first section briefly describes the main idea of this project,
+with no technical information
+\item the second section shows, still on an abstract level, what will be
+needed in the development of the software: the constraints of the
+system, the assumptions about the ``world'' it will interact with,
+along with the type of users and scenario we are expecting to see
+it work for
+\item the third section goes into deeper detail, with UML diagrams and Alloy
+abstracts used to better understand the entities used by each functionality
+and how they will transmit information between each other
+\end{itemize}
+
+\section{Overall Description}
+
+
+\subsection{Product perspective}
+
+``myTaxiService'' is a web and mobile app that relies on Google
+Maps and PayPal for some functions, such as the payment of the service
+or the localization of taxies. It will need to be able to interact
+with these applications without delay or problems.
+
+The app will be divided in two parts, one for the customers and the
+other for the taxi driver. The look and functionalities of the two
+will be different, but they will have to interoperate with each other
+as well as the system. The customer interface must be prepared for
+both browser and mobile app, while the drivers' interface must be
+done only for mobile.
+
+
+\subsubsection{Interfaces requirements}
+\begin{itemize}
+\item The mobile app must be able to run on devices with one gigabyte of
+ram and displays of three inches, on top of being able to work on
+Android, iOS and Windows phone
+\item The web app must be accessibile from all the most used browsers (Internet
+Explorer, Firefox, Opera, Chrome...)
+\item The app for the drivers must be really intuitive and easy to use,
+with no redundant objects
+\end{itemize}
+
+\subsection{Product functions}
+
+The product will have two sets of functions, one for the drivers'
+side and one for the customers' side.
+
+The application for the drivers need to let them
+\begin{itemize}
+\item update their status (busy/available/offline)
+\item accept or refuse calls from the system
+\item modify their account
+\end{itemize}
+while the application for customers will have to let them
+\begin{itemize}
+\item call a taxi
+\item make a reservation
+\item check the position of the taxi the system got them
+\item modify their account
+\end{itemize}
+and for both, there will need to be the functions
+\begin{itemize}
+\item register
+\item log in
+\end{itemize}
+
+\subsection{User characteristics}
+
+There are two types of intended users for this app: customers and
+taxi drivers.
+
+The customer will be of all age and educational level, no restriction
+whatsoever. The drivers on the other hand, will need to have a valid
+license, their own vehicle, and will have to respect all requirements
+needed with their profession, that can vary from region to region.
+
+
+\subsection{Constraints}
+\begin{itemize}
+\item The system must respect the rules of taxi service of every region
+and the cookies policy
+\end{itemize}
+
+\subsection{Assumptions and dependencies}
+
+The system will work under these assumptions
+
+
+\section{Specific Requirements}
+
+
+\subsection{External interfaces}
+
+
+\subsection{Functions}
+
+
+\subsection{Scenario}
+
+
+\subsubsection{First scenario}
+
+Tsukishima is training along with his teammates, and the exercise
+is to run uphill until you reach the finish line. Unluckily, Tsukishima
+really isn't feeling it today, and doesn't want to build up a sweat
+running. He could walk all the way, but it would still take too much
+effort, or he could try and find a different solution. He opens up
+Google and searches for a way to call a taxi. He stumbles upon the
+``myTaxiService'' site and decides to give it a try: he turns on
+his GPS, leaves his name, surname and email and confirms his position
+when the site asks for them and receives confirmation that a taxi
+is on his way and should arrive in five minutes. The taxi driver arrives
+on time, brings him to his destination and gets paid; Tsukishima is
+happy with the result and decides to download the ``myTaxiService''
+app on his phone and to sign up right away, leaving his name, surname
+and email again along with a username and a password. Now the user
+``MoonySaur11'' will be able to skip running exercises any time
+he wants.
+
+
+\subsubsection{Second scenario}
+
+Paolo has a date a fateful friday afternoon, and wants to get the
+tube from Cadorna to Loreto. But Paolo decided to have a date exactly
+the day in which ATM had scheduled a strike. Seeing the awful situation
+that is happening inside the station, he remembers about the myTaxiService
+app he has on his phone and decides to use it. He calls for a taxi,
+receives confirmation along with an estimated waiting time and the
+taxi code and decides to go wait outside, even though it's raining.
+Some minutes later, the system notifies Paolo that the driver is a
+few minutes late, but when he looks to the real-time position of the
+taxi on the application he notices that the symbol on the map is motionless
+and the estimated time is growing. The customer waits another fifteen
+minutes and is getting quite angry, when the driver finally shows
+up, with sunglasses and Starbucks, to pick him up. Paolo arrives to
+his destination late and his date thought that he'd been stood up,
+so he left. Paolo is fuming when he opens the myTaxiService app to
+complain about the service offered by taxi number 852399. The system
+gets notified of the driver's behaviour and takes action about it.
+
+
+\subsubsection{Third scenario}
+
+Jennifer Wilson needs to go to London to meet one of his lovers. Since
+she's leaving later in the day and doesn't want to risk not having
+a taxi ready, she decides to reserve a taxi with the myTaxiService
+app. She logs in, chooses the right functionality and inserts the
+origin and destination of the trip and the time she wants to leave.
+She also chooses to pay online with PayPal and after that, she goes
+to finish preparing her pink suitcase.
+
+
+\subsubsection{Fourth scenario}
+
+A cabbie receives notification from the system that a certain ``PinkLadyRach''
+needs a ride to London. He opens the app, accepts the job and gets
+on the road. The cabbie picks up the lady, but instead of bringing
+her to her destination he brings her to a secluded place, and offers
+to play a game with her. Poor PinkLady couldn't know that her driver
+was going to be a murderer that kills his victims with mind games
+and poisonous pills. The cabbie wins the game, killing the lady, and
+thus he no longer is servicing a customer. He takes out his smartphone
+and changes is status on the app from ``busy'' to ``available'',
+ready to go meet another unsuspecting victim.
+
+
+\subsection{Performance requirements}
+
+
+\subsection{Logical database requirements}
+
+
+\subsection{Design constraints}
+
+
+\subsection{Software system attributes}
+
+
+\subsection{Organizing the specific requirements}
+\end{document}
