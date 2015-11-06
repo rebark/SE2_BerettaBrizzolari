@@ -1,23 +1,26 @@
-\section{Introduzione}
+\section{Introduction}
 
 
 \subsection{Purpose}
 
-The purpose of this Requirement Analysis Specification Document is
-to
+The purpose of this document is to explain in detail what the project
+``myTaxiService'' is about, specifying all requirements and specifications
+useful for the development of the software and letting the fruitors
+have an idea of how much work will be needed for the actual implementation
+of the application.
 
 
 \subsection{Scope}
 
-The scope is to develop the application MyTaxiService, that will be
-useful to optimize the taxi service of the city. This application
-will allow customers to request a taxi in the easiest way possible,
-passing through a system which will keep track of drivers\textquoteright{}
-availability. The system will choose the taxi for the customer and
-notify both parties, without them needing to have a direct contact.
-We want this application to be accessible from both smartphones and
-computer browsers. It will also need two different interfaces, one
-for each type of user: customer and taxi driver.
+The main goal of this project is to optimize the taxi service of the
+city. This application will allow customers to request a taxi in the
+easiest way possible, passing through a system which will keep track
+of drivers\textquoteright{} availability. The system will choose the
+taxi for the customer and notify both parties, without them needing
+to have a direct contact. We want this application to be accessible
+from both smartphones and computer browsers. It will also need two
+different interfaces, one for each type of user: customer and taxi
+driver.
 
 
 \subsection{Definitions, acronysm and abbreviations}
@@ -28,16 +31,19 @@ for each type of user: customer and taxi driver.
 
 \subsection{Overview}
 
-From section 2 onwards, this document will contain all details regarding
-this project. 
-
-Section 2 is an overall description of the problem, with more details
-about the product itself, the characteristic of the user and constraints,
-assumption and dependencies of the system.
-
-Section 3 focuses on the specific requirements of each part of the
-project .
-
+This document is divided in three parts.
+\begin{itemize}
+\item the first section briefly describes the main idea of this project,
+with no technical information
+\item the second section shows, still on an abstract level, what will be
+needed in the development of the software: the constraints of the
+system, the assumptions about the ``world'' it will interact with,
+along with the type of users and scenario we are expecting to see
+it work for
+\item the third section goes into deeper detail, with UML diagrams and Alloy
+abstracts used to better understand the entities used by each functionality
+and how they will transmit information between each other
+\end{itemize}
 
 \section{Overall Description}
 
@@ -64,6 +70,8 @@ ram and displays of three inches, on top of being able to work on
 Android, iOS and Windows phone
 \item The web app must be accessibile from all the most used browsers (Internet
 Explorer, Firefox, Opera, Chrome...)
+\item The app for the drivers must be really intuitive and easy to use,
+with no redundant objects
 \end{itemize}
 
 \subsection{Product functions}
@@ -82,7 +90,6 @@ while the application for customers will have to let them
 \item call a taxi
 \item make a reservation
 \item check the position of the taxi the system got them
-\item send a message to the system, like a complain
 \item modify their account
 \end{itemize}
 and for both, there will need to be the functions
@@ -109,6 +116,8 @@ and the cookies policy
 \end{itemize}
 
 \subsection{Assumptions and dependencies}
+
+The system will work under these assumptions
 
 
 \section{Specific Requirements}
